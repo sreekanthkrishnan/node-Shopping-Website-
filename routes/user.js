@@ -10,7 +10,7 @@ const verfiyLogin = (req, res, next) => {
     if (req.session.loggedIn) {
         next();
     } else {
-        res.redirect("/login");
+        res.redirect("/");
     }
 };
 
@@ -68,7 +68,7 @@ router.get("/logout", (req, res) => {
 });
 
 /* Requst for cart*/
-router.get("/cart", verfiyLogin, (req, res) => {
+router.get( "/cart",verfiyLogin, (req, res) => {
     if (req.session.loggedIn) {
         res.render("user/cart");
     } else {

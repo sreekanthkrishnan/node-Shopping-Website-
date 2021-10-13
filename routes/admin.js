@@ -34,4 +34,10 @@ router.post("/add-product", function (req, res) {
     });
 });
 
+router.get("/delete-product/:id", (req, res) => {
+    let id = req.params.id;
+    productHelper.deleteProduct(id).then((response) => {
+        res.redirect("/admin");
+    });
+});
 module.exports = router;
