@@ -1,0 +1,72 @@
+<div class="row">
+    <div class="col-md-5 m-auto">
+        <div class="container mt-5 p-5">
+            <h2 class="text-center mb-5">Sign Up</h2>
+            <form
+                class="container"
+                method="post"
+                action="/signup
+            "
+            >
+                <div class="form-group mb-3">
+                    <label for="exampleInputName">User Name</label>
+                    <input
+                        type="text"
+                        name="name"
+                        class="form-control"
+                        id="exampleInputName"
+                        aria-describedby="emailHelp"
+                        placeholder="Enter name"
+                        autofocus
+                    />
+                    <small id="emailHelp" class="form-text text-muted">We'll never share your email
+                        with anyone else.</small>
+                </div>
+                <div class="form-group mb-3">
+                    <label for="exampleInputEmail1">Email address</label>
+                    <input
+                        type="email"
+                        name="email"
+                        class="form-control"
+                        id="exampleInputEmail1"
+                        aria-describedby="emailHelp"
+                        placeholder="Enter email"
+                        autofocus
+                    />
+                    <small id="emailHelp" class="form-text text-muted">We'll never share your email
+                        with anyone else.</small>
+                </div>
+
+                <div class="form-group mb-3">
+                    <label for="exampleInputPassword1">Password</label>
+                    <input
+                        type="password"
+                        name="password"
+                        class="form-control"
+                        id="exampleInputPassword1"
+                        placeholder="Password"
+                        autofocus
+                    />
+                </div>
+                <div class="form-group mb-3">
+                    <label for="exampleInputConfirmPassword">Password</label>
+                    <input
+                        name="cfn-password"
+                        type="password"
+                        class="form-control"
+                        id="exampleInputConfirmPassword"
+                        placeholder="Confirm Password"
+                        autofocus
+                    />
+                </div>
+                <div
+                    class="mb-3"
+                    style="display:flex; justify-content:space-between; align-item:center; "
+                >
+                    <a href="/login">Already have a account?</a>
+
+                    <button type="submit" class="btn btn-primary">Submit</button></div>
+            </form>
+        </div>
+    </div>
+</div>

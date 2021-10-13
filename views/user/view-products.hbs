@@ -1,0 +1,22 @@
+<!-- Header section -->
+
+<Section style="margin: 50px;">
+    <div class="row">
+
+        {{#each product}}
+            <div class="col-md-3" style="min-height:300px; max-height:300px overdbflow:hidden;">
+                <div class="card" style="margin-bottom: 25px;">
+                    <img src="/product-images/{{this._id}}.jpg" class="card-img-top" alt="..." style="max-width: 100px; margin:0 auto;" />
+                    <div class="card-body">
+                        <h5 class="card-title">{{this.product}}</h5>
+                        <p>{{this.category}}</p>
+                        <p>{{this.description}}</p>
+                        <p class="card-title">$ {{this.price}}</p>
+                        <a href="#" class="btn btn-primary">Buy Now</a>
+                    </div>
+                </div>
+
+            </div>
+        {{/each}}
+    </div>
+</Section>
