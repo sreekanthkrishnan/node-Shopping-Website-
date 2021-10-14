@@ -21,12 +21,39 @@ module.exports = {
     },
 
     deleteProduct: (id) => {
-        console.log(id);
         return new Promise((resolve, reject) => {
             db.get()
                 .collection(collection.PRODUCT_COLLECTION)
                 .deleteOne({ _id: ObjectId(id) })
                 .then((data) => resolve(data));
+        });
+    },
+    getProductDetails: (id) => {
+        return new Promise((resolve, reject) => {
+            db.get()
+                .collection(collection.PRODUCT_COLLECTION)
+                .findOne({ _id: ObjectId(id) })
+                .then((data) => resolve(data));
+        });
+    },
+    updateProduct: (id, productData) => {
+        return new Promise((resolve, reject) => {
+            db.get()
+                .collection(collection.PRODUCT_COLLECTION)
+                .updateOne(
+                    { _id: ObjectId(id) },
+                    {
+                        $set: {
+                            product: productData.product,
+                            category: productData.category,
+                            price: productData.price,
+                            description: productData.description,
+                        },
+                    }
+                )
+                .then((response) => {
+                    resolve(response);
+                });
         });
     },
 };
